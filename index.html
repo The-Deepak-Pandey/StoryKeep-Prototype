@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>StoryKeep — Interactive Prototype</title>
+  <meta name="description" content="StoryKeep interactive prototype: Helping older adults preserve stories, stay connected, and live well.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- ===== Background Branding ===== -->
+  <div class="prototype-bg">
+    <div class="bg-logo">📖 StoryKeep</div>
+    <div class="bg-subtitle">Interactive Prototype</div>
+  </div>
+
+  <!-- ===== Controls Bar ===== -->
+  <div class="controls-bar" id="controls-bar">
+    <!-- Role Switcher -->
+    <div class="role-switcher" id="role-switcher">
+      <button class="role-btn active" data-role="elder" id="role-btn-elder">
+        <span class="role-icon">👴</span>
+        <span class="role-label">Elder</span>
+      </button>
+      <div class="role-divider"></div>
+      <button class="role-btn" data-role="supporter" id="role-btn-supporter">
+        <span class="role-icon">👤</span>
+        <span class="role-label">Supporter</span>
+      </button>
+    </div>
+
+    <!-- Onboarding Triggers -->
+    <div class="onboarding-triggers">
+      <button class="onboarding-btn" id="btn-onboarding-elder" title="Elder Onboarding">
+        🎓 Elder Setup
+      </button>
+      <button class="onboarding-btn" id="btn-onboarding-supporter" title="Supporter Onboarding">
+        🛠️ Supporter Setup
+      </button>
+    </div>
+  </div>
+
+  <!-- ===== Phone Frame ===== -->
+  <div class="phone-frame" id="phone-frame">
+    <!-- Notch -->
+    <div class="phone-notch"></div>
+    
+    <!-- Screen Container -->
+    <div class="screen-container" id="screen-container">
+      <!-- Status Bar (always visible) -->
+      <div class="phone-status-bar" id="phone-status-bar">
+        <span class="status-time" id="status-time">10:30</span>
+        <span class="status-icons">
+          <span class="status-signal">📶</span>
+          <span class="status-battery" id="status-battery">🔋 82%</span>
+        </span>
+      </div>
+
+      <!-- Dynamic Screen Content -->
+      <div class="screen-content" id="screen-content">
+        <!-- Screens rendered here by JS -->
+      </div>
+
+      <!-- Bottom Navigation (dynamic) -->
+      <div class="bottom-nav" id="bottom-nav">
+        <!-- Rendered by JS based on role -->
+      </div>
+    </div>
+
+    <!-- Home Indicator -->
+    <div class="phone-home-indicator"></div>
+  </div>
+
+  <!-- ===== Screen Label ===== -->
+  <div class="screen-label" id="screen-label">
+    <span class="screen-label-id" id="screen-label-id">2.1</span>
+    <span class="screen-label-text" id="screen-label-text">Elder Home Screen</span>
+  </div>
+
+  <script src="screens_onboarding.js"></script>
+  <script src="screens_supporter.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
